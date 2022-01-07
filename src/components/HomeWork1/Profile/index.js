@@ -15,7 +15,7 @@ import './styles.css'
       }
     }
     
-    console.log(user.username);
+   
     return (
       <div className='card'>
         <div className='image-logo'>
