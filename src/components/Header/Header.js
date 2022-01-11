@@ -1,9 +1,10 @@
-import { NavLink, Routes, Router, Link, Route } from 'react-router-dom'
+import React from 'react';
 import { AppBar, Container, Toolbar, Typography } from "@mui/material";
+
 import NavMenu from '../NavMenu/NavMenu';
 import './Header.css'
 
-const pages = ['Products', 'Pricing', 'Blog'];
+
 
 function Header() {
 

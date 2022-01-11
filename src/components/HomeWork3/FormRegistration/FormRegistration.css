@@ -1,0 +1,23 @@
+form{
+    margin-top: 20px;
+}
+
+.wrapInputs{
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.input{
+    width: 100%;
+}
+
+.errors{
+    color: red;
+    font-size: 12px;
+}
+
+.errorsLine{
+    border-color: red;
+}
