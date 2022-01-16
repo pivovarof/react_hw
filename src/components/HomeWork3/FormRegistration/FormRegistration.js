@@ -2,25 +2,23 @@ import React from 'react';
 import { Formik } from "formik";
 import Box from '@mui/material/Box';
 import TextField from '@mui/material/TextField';
-
 import { Button } from "@mui/material";
 import * as yup from 'yup';
 
 import './FormRegistration.css'
 
+const validation = yup.object().shape({
+    name: yup.string().typeError('Must be a string').required('Required'),
+    password: yup.string().typeError('Must be a string').required('Required'),
+    confirmPassword: yup.string().oneOf([yup.ref('password')], 'Password mismatch').required('Required'),
+    email: yup.string().email('Wrong email address').required('Required'),
 
+})
 
 
 const FormRegistration = () => {
 
-    const validation = yup.object().shape({
-        name: yup.string().typeError('Must be a string').required('necessarily'),
-        password: yup.string().typeError('Must be a string').required('necessarily'),
-        confirmPassword: yup.string().oneOf([yup.ref('password')], 'Password mismatch').required('necessarily'),
-        email: yup.string().email('Wrong email address').required('necessarily'),
-
-    })
-
+    
     return (
         <div>
             <Formik
@@ -33,6 +31,7 @@ const FormRegistration = () => {
                 validateOnBlur
                 onSubmit={(value) => { console.log(value) }}
                 validationSchema={validation}
+                
             >
                 {({ values, errors, touched, handleChange, handleBlur, isValid, handleSubmit, dirty }) => (
                     <Box
@@ -101,7 +100,7 @@ const FormRegistration = () => {
 
 
                             <Button variant="contained"
-                                disabled={!isValid && !dirty}
+                                disabled={!isValid && dirty }
                                 onClick={handleSubmit}
                                 type={'submit'}
                             >Create Account</Button>

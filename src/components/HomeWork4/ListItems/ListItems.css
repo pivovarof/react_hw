@@ -1,0 +1,22 @@
+.listItemWrap{
+    display: flex;
+    flex-direction: column;
+    border: 1px solid rgb(175, 173, 173);
+    border-radius: 4px;
+    padding: 10px 0px;
+    width: 100%;
+    box-shadow: 15px 15px 30px rgba(0, 0, 0, .15);
+    margin-top: 10px;
+}
+
+.listItemWrap span{
+    margin: 10px;
+}
+
+.buttonsWrap{
+    display: flex;
+}
+
+.buttonsWrap button{
+    margin: 10px;
+}

@@ -8,6 +8,7 @@ import Box from '@mui/material/Box';
 import FormRegistration from '../FormRegistration/FormRegistration';
 import FormLogIn from '../FormLogIn/FormLogIn'
 
+
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
 
